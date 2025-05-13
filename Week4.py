@@ -17,6 +17,13 @@ try:
     
 except FileNotFoundError:
     print("Double check the name again please")
+    
+# Added Permission Error exception & Decoding ones 
+except PermissionError:
+    print("Seems you don't have permission to access that file")
+    
+except UnicodeDecodeError:
+    print("The file exists but for some reason the file is unreadable")
 
 finally:
     file.close()
